@@ -63,8 +63,8 @@ class Tracker():
             if match:
                 self._logout_url = "https://{}/{}".format(
                     domain, match.group(0))
-            else:
-                raise TrackerException("Couldn't find logout URL")
+#            else:
+#                raise TrackerException("Couldn't find logout URL")
         else:
             log.error(resp.text)
             raise TrackerException("Couldn't determine login status from HTML")
